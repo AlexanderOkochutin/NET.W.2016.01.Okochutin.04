@@ -17,10 +17,16 @@ namespace Task05.Logic
         /// Extension method for double 
         /// </summary>
         /// <param name="num"> input number</param>
-        /// <returns> BitArray of double (in IEEE 754) </returns>
-        public static BitArray GetDoubleIeee(this double num)
+        /// <returns> string of binary (in IEEE 754) </returns>
+        public static string GetDoubleIeee(this double num)
         {
-            return new BitArray(BitConverter.GetBytes(num));
+            BitArray temp = new BitArray(BitConverter.GetBytes(num));
+            StringBuilder a = new StringBuilder(64);
+            for (int i = 63; i >= 0; i--)
+            {
+                a.Append(Convert.ToInt32(temp[i]));
+            }
+            return a.ToString();
         }
     }
 }
