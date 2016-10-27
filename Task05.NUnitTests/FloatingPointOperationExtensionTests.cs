@@ -8,11 +8,13 @@ namespace Task05.NUnitTests
     [TestFixture]
     public class FloatingPointOperationExtensionTests
     {
-
+        // Expected result taked from online IEEE754 converter
         [TestCase(19.0,ExpectedResult = "0100000000110011000000000000000000000000000000000000000000000000")]
         [TestCase(-20.0, ExpectedResult = "1100000000110100000000000000000000000000000000000000000000000000")]
         [TestCase(0, ExpectedResult = "0000000000000000000000000000000000000000000000000000000000000000")]
         [TestCase(1, ExpectedResult = "0011111111110000000000000000000000000000000000000000000000000000")]
+        [TestCase(double.PositiveInfinity, ExpectedResult = "0111111110000000000000000000000000000000000000000000000000000000")]
+      
         public string GetDoubleIeee_Test(double inputNum)
         {
             
