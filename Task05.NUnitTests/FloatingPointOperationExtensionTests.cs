@@ -17,9 +17,7 @@ namespace Task05.NUnitTests
       
         public string GetDoubleIeee_Test(double inputNum)
         {
-            
            return inputNum.GetDoubleIeee();
         }
-
     }
 }

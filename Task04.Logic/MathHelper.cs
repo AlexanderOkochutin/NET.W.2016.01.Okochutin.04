@@ -29,6 +29,7 @@ namespace Task04.Logic
             {
                 throw new ArgumentOutOfRangeException(nameof(n), "n must be in range (0,...)");
             }
+
             if (accuracy <= 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(accuracy), "accuracy must be in range (0,...)");
@@ -50,8 +51,6 @@ namespace Task04.Logic
                 }
                 x = nx;
             }
-        }
-
-     
+        }  
     }
 }
